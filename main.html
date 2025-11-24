@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Floral Balloon Domes</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+        color: #5a5a5a;
+        background: #faf8f7;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        text-align: center;
+        padding: 80px 20px 60px;
+        background: #f5e6eb;
+    }
+
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 4em;
+        font-weight: 600;
+        color: #a37183;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+        color: #b88a9a;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        text-align: center;
+        background: #faf8f7;
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.25em;
+        line-height: 1.8;
+        color: #6b6b6b;
+        font-weight: 300;
+    }
+
+    .hero-content p {
+        margin-bottom: 30px;
+    }
+
+    .decorative-line {
+        width: 80px;
+        height: 1px;
+        background: #b8ae9f;
+        margin: 40px auto;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #faf8f7;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 40px 30px;
+        background: #ffffff;
+        border-radius: 2px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-icon {
+        margin-bottom: 25px;
+    }
+
+    .feature-icon .material-icons {
+        font-size: 48px;
+        color: #c9a0ad;
+    }
+
+    .feature h3 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.8em;
+        color: #a37183;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .feature p {
+        color: #9d8a92;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+
+    .contact {
+        background: #a37183;
+        color: #faf8f7;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .contact h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em;
+        margin-bottom: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .contact-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 50px;
+        opacity: 0.9;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .contact-icon .material-icons {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #d4b8c1;
+    }
+
+    .contact-label {
+        font-size: 0.85em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        opacity: 0.8;
+        font-weight: 300;
+    }
+
+    .contact-value {
+        font-size: 1.2em;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+
+    .contact-value a {
+        color: #faf8f7;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .contact-value a:hover {
+        opacity: 0.7;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px 20px;
+        background: #f5e6eb;
+        color: #b88a9a;
+        font-size: 0.9em;
+        font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .hero-content {
+            font-size: 1.1em;
+        }
+
+        .contact h2 {
+            font-size: 2em;
+        }
+
+        .contact-info {
+            gap: 50px;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Floral Balloon Domes</h1>
+            <p class="subtitle">Luxury Celebrations, Elevated</p>
+        </div>
+    </header>
+
+```
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <p>Bring the magic of every moment to life with our luxury floral balloon domes – a captivating fusion of elegance, personalization, and seasonal charm.</p>
+            
+            <div class="decorative-line"></div>
+            
+            <p>Whether you're hosting a cozy holiday gathering or planning a grand celebration, our handcrafted balloon bouquets and décor will instantly elevate your space.</p>
+        </div>
+    </div>
+</section>
+
+<div class="features">
+    <div class="feature">
+        <div class="feature-icon">
+            <span class="material-icons">auto_awesome</span>
+        </div>
+        <h3>Elegant Design</h3>
+        <p>Each piece is thoughtfully crafted to create an unforgettable visual experience</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">
+            <span class="material-icons">palette</span>
+        </div>
+        <h3>Personalized Touch</h3>
+        <p>Customized to match your vision and celebration theme perfectly</p>
+    </div>
+    <div class="feature">
+        <div class="feature-icon">
+            <span class="material-icons">spa</span>
+        </div>
+        <h3>Seasonal Charm</h3>
+        <p>Fresh designs that capture the essence of every season and occasion</p>
+    </div>
+</div>
+
+<section class="contact">
+    <div class="container">
+        <h2>Let's Connect</h2>
+        <p class="contact-subtitle">For more information about our luxury floral balloon domes</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <span class="material-icons">phone</span>
+                </div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">
+                    <a href="tel:2011234567">201-123-4567</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <span class="material-icons">email</span>
+                </div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                    <a href="mailto:myEmail@hosting.com">myEmail@hosting.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Floral Balloon Domes. All rights reserved.</p>
+    </div>
+</footer>
+```
+
+</body>
+</html>
