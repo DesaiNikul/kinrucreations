@@ -81,6 +81,22 @@
         margin-bottom: 30px;
     }
 
+    .hero-media {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero-media img {
+        max-width: 360px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    }
+
     .decorative-line {
         width: 80px;
         height: 1px;
@@ -228,6 +244,10 @@
         .contact-info {
             gap: 50px;
         }
+
+        .hero-media {
+            flex-direction: column;
+        }
     }
 </style>
 
@@ -247,7 +267,11 @@
             
             <div class="decorative-line"></div>
             
-            <p>Whether you're hosting a cozy holiday gathering or planning a grand celebration, our handcrafted balloon bouquets and décor will instantly elevate your space.</p>
+            <div class="hero-media">
+                <p>Whether you're hosting a cozy holiday gathering or planning a grand celebration, our handcrafted balloon bouquets and décor will instantly elevate your space.</p>
+                <img src="/images/Than.jpg" alt="Luxury floral balloon dome">
+            </div>
+            
         </div>
     </div>
 </section>
