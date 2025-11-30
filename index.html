@@ -31,6 +31,11 @@
         line-height: 1.6;
         color: #5a5a5a;
         background: #faf8f7;
+        padding-bottom: 80px;
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 
     .container {
@@ -63,38 +68,135 @@
     }
 
     .hero {
-        padding: 80px 20px;
-        text-align: center;
-        background: #faf8f7;
-    }
-
-    .hero-content {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 1.25em;
-        line-height: 1.8;
-        color: #6b6b6b;
-        font-weight: 300;
-    }
-
-    .hero-content p {
-        margin-bottom: 30px;
-    }
-
-    .hero-media {
-        display: flex;
-        gap: 24px;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .hero-media img {
-        max-width: 360px;
+        position: relative;
         width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+        height: 600px;
+        overflow: hidden;
+        background: #000;
+    }
+
+    .hero-carousel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .hero-slide.active {
+        opacity: 1;
+    }
+
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        color: white;
+        padding: 60px 20px 40px;
+        text-align: center;
+    }
+
+    .hero-overlay h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 3em;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .hero-overlay p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto;
+        color: rgba(255,255,255,0.95);
+    }
+
+    .carousel-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .carousel-dot.active {
+        background: white;
+    }
+
+    .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(163,113,131,0.98);
+        color: white;
+        padding: 15px 20px;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        backdrop-filter: blur(10px);
+    }
+
+    .sticky-cta-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: white;
+        transition: opacity 0.3s;
+    }
+
+    .sticky-cta-item:hover {
+        opacity: 0.8;
+    }
+
+    .sticky-cta-item .material-icons {
+        font-size: 24px;
+    }
+
+    .sticky-cta-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sticky-cta-label {
+        font-size: 0.75em;
+        opacity: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .sticky-cta-value {
+        font-size: 1.1em;
+        font-weight: 500;
     }
 
     .decorative-line {
@@ -137,6 +239,16 @@
         color: #c9a0ad;
     }
 
+    .feature-image {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
     .feature h3 {
         font-family: 'Dancing Script', cursive;
         font-size: 1.8em;
@@ -145,78 +257,103 @@
         font-weight: 500;
     }
 
+    .feature h4 {
+        font-size: 0.9em;
+        color: #b88a9a;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
     .feature p {
         color: #9d8a92;
         line-height: 1.7;
         font-weight: 300;
     }
 
-    .contact {
-        background: #a37183;
-        color: #faf8f7;
+    .gallery {
         padding: 80px 20px;
         text-align: center;
+        background: #ffffff;
     }
 
-    .contact h2 {
+    .gallery h2 {
         font-family: 'Dancing Script', cursive;
-        font-size: 3em;
+        font-size: 3.5em;
+        color: #a37183;
         margin-bottom: 20px;
         font-weight: 600;
-        letter-spacing: 2px;
     }
 
-    .contact-subtitle {
+    .gallery-subtitle {
         font-size: 1.1em;
-        margin-bottom: 50px;
+        color: #9d8a92;
+        margin-bottom: 60px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(163,113,131,0.95), transparent);
+        color: white;
+        padding: 30px 20px;
+        transform: translateY(100%);
+        transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-item-overlay {
+        transform: translateY(0);
+    }
+
+    .gallery-item-overlay h3 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+
+    .gallery-item-overlay p {
+        font-size: 0.95em;
         opacity: 0.9;
-        font-weight: 300;
-        letter-spacing: 1px;
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: center;
-        gap: 80px;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-
-    .contact-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .contact-icon .material-icons {
-        font-size: 40px;
-        margin-bottom: 10px;
-        color: #d4b8c1;
-    }
-
-    .contact-label {
-        font-size: 0.85em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        opacity: 0.8;
-        font-weight: 300;
-    }
-
-    .contact-value {
-        font-size: 1.2em;
-        font-weight: 300;
-        letter-spacing: 0.5px;
-    }
-
-    .contact-value a {
-        color: #faf8f7;
-        text-decoration: none;
-        transition: opacity 0.3s ease;
-    }
-
-    .contact-value a:hover {
-        opacity: 0.7;
     }
 
     footer {
@@ -233,20 +370,64 @@
             font-size: 2.5em;
         }
 
-        .hero-content {
-            font-size: 1.1em;
+        .hero {
+            height: 400px;
         }
 
-        .contact h2 {
+        .hero-overlay h2 {
             font-size: 2em;
         }
 
-        .contact-info {
-            gap: 50px;
+        .hero-overlay p {
+            font-size: 1em;
         }
 
-        .hero-media {
+        .gallery h2 {
+            font-size: 2.5em;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .gallery-item img {
+            height: 350px;
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+        }
+
+        .feature h4 {
+            font-size: 0.85em;
+        }
+
+        .features {
+            padding: 60px 20px;
+        }
+
+        .sticky-cta {
             flex-direction: column;
+            gap: 15px;
+            padding: 12px 15px;
+        }
+
+        .sticky-cta-item {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .sticky-cta-text {
+            align-items: center;
+        }
+
+        .sticky-cta-label {
+            font-size: 0.7em;
+        }
+
+        .sticky-cta-value {
+            font-size: 0.95em;
         }
     }
 </style>
@@ -261,79 +442,148 @@
     </header>
 
 <section class="hero">
+    <div class="hero-carousel">
+        <div class="hero-slide active">
+            <img src="images/ThanksGiving.jpeg" alt="Thanksgiving petal dome">
+        </div>
+        <div class="hero-slide">
+            <img src="images/WhiteChristmas.jpeg" alt="White Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+        </div>
+        <div class="hero-slide">
+            <img src="images/RedChristmas.jpeg" alt="Red Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+        </div>
+        <div class="hero-slide">
+            <img src="images/HappyBirthday.jpeg" alt="Happy Birthday petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+        </div>
+    </div>
+    <div class="hero-overlay">
+        <h2>Eternal Blooms for Timeless Moments</h2>
+        <p>Handcrafted luxury petal domes that transform celebrations into unforgettable experiences</p>
+    </div>
+    <div class="carousel-dots">
+        <span class="carousel-dot active" data-slide="0"></span>
+        <span class="carousel-dot" data-slide="1"></span>
+        <span class="carousel-dot" data-slide="2"></span>
+        <span class="carousel-dot" data-slide="3"></span>
+    </div>
+</section>
+
+<section class="gallery">
     <div class="container">
-        <div class="hero-content">
-            <p>Bring the magic of every moment to life with our luxury petal domes – a captivating fusion of elegance, personalization, and seasonal charm.</p>
-            
-            <div class="decorative-line"></div>
-            
-            <div class="hero-media">
-                <p>Whether you're hosting a cozy holiday gathering or planning a grand celebration, our handcrafted balloon bouquets and décor will instantly elevate your space.</p>
-                <img src="/images/ThanksGiving.jpeg" alt="Luxury petal dome">
+        <h2>Perfect for Every Celebration</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/RedChristmas.jpeg" alt="Red Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+                <div class="gallery-item-overlay">
+                    <h3>🎄 Red Christmas</h3>
+                    <p>Festive red elegance for your holiday celebrations</p>
+                </div>
             </div>
-            
+            <div class="gallery-item">
+                <img src="images/WhiteChristmas.jpeg" alt="White Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+                <div class="gallery-item-overlay">
+                    <h3>❄️ White Christmas</h3>
+                    <p>Classic winter charm with timeless sophistication</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/HappyBirthday.jpeg" alt="Special occasions petal dome">
+                <div class="gallery-item-overlay">
+                    <h3>🎉 Special Occasions</h3>
+                    <p>Birthdays, anniversaries & all life's moments</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <div class="features">
     <div class="feature">
-        <div class="feature-icon">
+        <img src="images/elegant-design-placeholder.jpg" alt="Elegant petal dome design" class="feature-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="feature-icon" style="display:none;">
             <span class="material-icons">auto_awesome</span>
         </div>
         <h3>Elegant Design</h3>
-        <p>Each piece is thoughtfully crafted to create an unforgettable visual experience</p>
+        <h4>Artfully Crafted Luxury</h4>
+        <p>Premium decorative flowers meet artistic balloon design in stunning arrangements that transform any celebration.</p>
     </div>
     <div class="feature">
-        <div class="feature-icon">
+        <img src="images/personalized-touch-placeholder.jpg" alt="Personalized petal dome" class="feature-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="feature-icon" style="display:none;">
             <span class="material-icons">palette</span>
         </div>
         <h3>Personalized Touch</h3>
-        <p>Create a personalized touch that shows your loved ones how special they are</p>
+        <h4>Your Story, Beautifully Told</h4>
+        <p>Custom colors, personalized messages, and unique touches create one-of-a-kind centerpieces for your special moments.</p>
     </div>
     <div class="feature">
-        <div class="feature-icon">
+        <img src="images/seasonal-charm-placeholder.jpg" alt="Seasonal petal dome arrangements" class="feature-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="feature-icon" style="display:none;">
             <span class="material-icons">spa</span>
         </div>
         <h3>Seasonal Charm</h3>
-        <p>Fresh designs that capture the essence of every season and occasion</p>
+        <h4>Celebrating Every Season</h4>
+        <p>Seasonal designs capture the essence of each moment beautifully.</p>
     </div>
 </div>
-
-<section class="contact">
-    <div class="container">
-        <h2>Let's Connect</h2>
-        <p class="contact-subtitle">For more information about our luxury petal domes</p>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <span class="material-icons">phone</span>
-                </div>
-                <div class="contact-label">Phone</div>
-                <div class="contact-value">
-                    <a href="tel:3474703888">(347)-470-3888</a>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <span class="material-icons">email</span>
-                </div>
-                <div class="contact-label">Email</div>
-                <div class="contact-value">
-                    <a href="mailto:KinRuCreations@gmail.com">KinRuCreations@gmail.com</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <footer>
     <div class="container">
         <p>&copy; 2025 Petal Dome. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- Sticky Contact Bar -->
+<div class="sticky-cta">
+    <a href="tel:3474703888" class="sticky-cta-item">
+        <span class="material-icons">phone</span>
+        <div class="sticky-cta-text">
+            <span class="sticky-cta-label">Call to Order</span>
+            <span class="sticky-cta-value">(347)-470-3888</span>
+        </div>
+    </a>
+    <a href="mailto:KinRuCreations@gmail.com" class="sticky-cta-item">
+        <span class="material-icons">email</span>
+        <div class="sticky-cta-text">
+            <span class="sticky-cta-label">Email Us</span>
+            <span class="sticky-cta-value">KinRuCreations@gmail.com</span>
+        </div>
+    </a>
+</div>
+
+<script>
+// Hero Carousel
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.carousel-dot');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+    });
+
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+
+// Auto-advance carousel every 4 seconds
+setInterval(nextSlide, 4000);
+
+// Dot navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+    });
+});
+</script>
 
 </body>
 </html>
