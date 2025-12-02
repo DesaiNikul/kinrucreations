@@ -1,0 +1,45 @@
+IMAGE SAVE INSTRUCTIONS FOR GALLERY UPDATE
+=============================================
+
+The HTML has been updated to use the following new image files:
+
+1. Anniversary.jpg - Replace RC1.jpg
+   - Should be the "Happy Anniversary My Love" image with snowman and red decorations
+   - Save location: C:\kinrucreations\images\Anniversary.jpg
+
+2. MerryChristmas.jpg - Replace WC1.jpg
+   - Should be the "Merry Christmas" image with white/cream flowers and ornaments
+   - Save location: C:\kinrucreations\images\MerryChristmas.jpg
+
+HOW TO SAVE THE IMAGES:
+-----------------------
+
+METHOD 1 - From Chat:
+1. Right-click on each image in the conversation above
+2. Click "Save image as..."
+3. Navigate to: C:\kinrucreations\images\
+4. Save with the exact filenames shown above (Anniversary.jpg and MerryChristmas.jpg)
+
+METHOD 2 - From Files:
+If the images are already saved on your computer:
+1. Navigate to where they're saved
+2. Copy both images
+3. Paste into: C:\kinrucreations\images\
+4. Rename them to Anniversary.jpg and MerryChristmas.jpg
+
+VERIFICATION:
+-------------
+After saving, these files should exist:
+- C:\kinrucreations\images\Anniversary.jpg
+- C:\kinrucreations\images\MerryChristmas.jpg
+
+Then the gallery will display correctly with your new images!
+
+HTML CHANGES ALREADY MADE:
+--------------------------
+✓ Updated image src attributes
+✓ Updated alt text
+✓ Updated overlay titles (💝 Happy Anniversary & 🎄 Merry Christmas)
+✓ Updated overlay descriptions
+
+Once you've saved the images, we can commit all changes to git.

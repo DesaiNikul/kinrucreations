@@ -429,6 +429,7 @@
 <section class="hero">
     <img src="images/ThanksGiving.jpeg" alt="Petal dome centerpiece" style="width: 100%; height: 100%; object-fit: cover;">
     <div class="hero-overlay">
+        <h2>Eternal Blooms for Timeless Moments</h2>
         <p>Handcrafted luxury petal domes that transform celebrations into unforgettable experiences</p>
         <a href="tel:3474703888" class="hero-cta">Order Your Custom Dome</a>
     </div>
@@ -439,17 +440,17 @@
         <h2>Perfect for Every Celebration</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="images/Anniversary.jpg" alt="Happy Anniversary petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+                <img src="images/RC1.jpg" alt="Red Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
                 <div class="gallery-item-overlay">
-                    <h3>💝 Happy Anniversary</h3>
-                    <p>Celebrate love and milestones with timeless elegance</p>
+                    <h3>🎄 Red Christmas</h3>
+                    <p>Festive red elegance for your holiday celebrations</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="images/MerryChristmas.jpg" alt="Merry Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
+                <img src="images/WC1.jpg" alt="White Christmas petal dome" onerror="this.src='images/ThanksGiving.jpeg'">
                 <div class="gallery-item-overlay">
-                    <h3>🎄 Merry Christmas</h3>
-                    <p>Elegant holiday warmth with festive floral beauty</p>
+                    <h3>❄️ White Christmas</h3>
+                    <p>Classic winter charm with timeless sophistication</p>
                 </div>
             </div>
             <div class="gallery-item">
@@ -471,7 +472,7 @@
         </div>
         <h3>Elegant Designs with Personalized Touch</h3>
         <h4>Artfully Crafted Luxury</h4>
-        <p>Premium decorative flowers meet artistic balloon design in stunning arrangements that transform any celebration. Personalized messages, and unique touches create one-of-a-kind centerpieces for your special moments.</p>
+        <p>Premium decorative flowers meet artistic balloon design in stunning arrangements that transform any celebration. Custom colors, personalized messages, and unique touches create one-of-a-kind centerpieces for your special moments.</p>
     </div>
     <div class="feature">
         <img src="images/seasonal-charm-placeholder.jpg" alt="Seasonal petal dome arrangements" class="feature-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
